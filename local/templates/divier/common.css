@@ -99,12 +99,12 @@ header{
 }
 .header-dropdown{
 	top: 100%;
-	left: 0px;
+	left: 0;
 	display: none;
 	position: absolute;
 	padding: 47px 60px;
 	background-color: #fff;
-	box-shadow: 2px 0px 6px 0px rgba(0,0,0,.19);
+	box-shadow: 2px 0 6px 0 rgba(0,0,0,.19);
 	min-width: 100%;
 	z-index: 10;
 }
@@ -124,16 +124,12 @@ header{
 	text-transform: none;
 }
 .header-menu-items li .header-dropdown a:last-child{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .header-menu-items li .header-dropdown a:hover{
 	color: #0062a0;
 }
-@media(max-width: 1495px){
-	.header-search{
-		max-width: 300px;
-	}
-}
+
 @media(max-width: 1199px){
 	.header-logo {
 		max-width: 150px;
@@ -151,15 +147,6 @@ header{
 	}
 	.tagline p{
 		font-size: 12px;
-	}
-	.header-search {
-		max-width: 200px;
-	}
-	.header-search input{
-		height: 30px;
-	}
-	.header-search button{
-		top: 5px;
 	}
 	.mail-phone a{
 		font-size: 13px;

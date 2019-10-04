@@ -28,10 +28,6 @@
 .news-search-item__button a img{
 	margin-left: 13px;
 }
-.search p{
-	font-size: 15px;
-	font-weight: 400;
-}
 @media(max-width: 1024px){
 	.news-search-item{
 		display: block;

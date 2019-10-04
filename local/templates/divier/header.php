@@ -59,5 +59,4 @@ IncludeTemplateLangFile(__FILE__);
         false
     ); ?>
 </header>
-<?
-    $APPLICATION->IncludeComponent("bitrix:breadcrumb", "divier"); ?>
+<? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "divier"); ?>
