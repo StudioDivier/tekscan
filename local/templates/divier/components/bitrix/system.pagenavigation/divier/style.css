@@ -1,0 +1,23 @@
+.pagination-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pagination-items a,
+.pagination-items span{
+    color: #000;
+    width: 41px;
+    height: 41px;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+span.pagination-item.active {
+    color: #fff;
+    background-color: #005c99;
+}

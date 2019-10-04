@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости");
+$APPLICATION->SetTitle("Статьи");
 ?><p>
 	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
@@ -57,7 +57,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_TEMPLATE" => "divier",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/news/",
+		"SEF_FOLDER" => "/stati/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","rss"=>"rss/","rss_section"=>"#SECTION_ID#/rss/","search"=>"search/","section"=>""),
 		"SET_LAST_MODIFIED" => "N",

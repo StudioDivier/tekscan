@@ -9,17 +9,17 @@ $aMenuLinks = Array(
     ),
     Array(
         "Новости",
-        "#",
+        "/news/",
         Array(),
         Array(
             "CHILDREN" => Array(
                 Array(
                     "NAME" => "Новости",
-                    "LINK" => "#"
+                    "LINK" => "/news/"
                 ),
                 Array(
                     "NAME" => "Статьи",
-                    "LINK" => "#"
+                    "LINK" => "/stati/"
                 )
             )
         ),
