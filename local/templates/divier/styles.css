@@ -90,24 +90,8 @@
 .three-col-item.silver .swiper-button-next{
 	background-image: url(../images/arrow_right2.svg);
 }
-.three-col-item.blue{
-	padding: 86px 0px;
-	background-color: #005c99;
-}
-.three-col-item.blue .swiper-button-prev{
-	background-image: url(../images/arrow_left.svg);
-}
-.three-col-item.blue .swiper-button-next{
-	background-image: url(../images/arrow_right.svg);
-}
 .fixed-swiper-button{
 	position: relative;
-}
-.three-col-item .swiper-button-prev{
-	left: -60px;
-}
-.three-col-item .swiper-button-next{
-	right: -60px;
 }
 .map{
 	width: 100%;
@@ -169,33 +153,12 @@
 	.main-banner-slider .swiper-button-next{
 		right: -40px;
 	}
-	.three-col-item .swiper-button-prev{
-		left: -48px;
-	}
-	.three-col-item .swiper-button-next{
-		right: -48px;
-	}
 }
-@media(max-width: 1495px){
-	.three-col-item .swiper-button-prev{
-		left: -60px;
-	}
-	.three-col-item .swiper-button-next{
-		right: -60px;
-	}
-}
+
 @media(max-width: 1360px){
-	.three-col-item .swiper-button-prev{
-		left: 10px;
-	}
-	.three-col-item .swiper-button-next{
-		right: 10px;
-	}
+
 	.three-col-item.silver .swiper-button-next, .three-col-item.silver .swiper-button-prev{
 		background-color: rgba(255,255,255,.15);
-	}
-	.three-col-item.blue .swiper-button-next, .three-col-item.blue .swiper-button-prev{
-		background-color: rgba(0,0,0,.15);
 	}
 }
 @media(max-width: 1350px){

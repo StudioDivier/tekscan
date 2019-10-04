@@ -192,16 +192,6 @@ header{
 	.tagline{
 		margin-bottom: 20px;
 	}
-	.header-search {
-		max-width: 100%;
-		margin-bottom: 20px;
-	}
-	.header-search input{
-		height: 41px;
-	}
-	.header-search button {
-		top: 11px;
-	}
 	.mail-phone a {
 		font-size: 21px;
 		justify-content: center;
@@ -313,43 +303,6 @@ section.footer{
 	}
 }
 /* /footer*/
-
-
-
-
-
-/*Хлебные крошки*/
-.breadcrumb{
-	background-color: #f7f7f7;
-	padding: 25px 0px 21px 0px;
-}
-.breadcrumb-items{
-	display: flex;
-	flex-wrap: wrap;
-}
-.breadcrumb-items a, .breadcrumb-items span{
-	display: flex;
-	position: relative;
-	align-items: center;
-	color: #646464;
-	font-size: 13px;
-	font-weight: 300;
-	text-decoration: none;
-	margin-bottom: 5px;
-}
-.breadcrumb-items span{
-	color: #000;
-}
-.breadcrumb-items a:after {
-	content: '';
-	display: block;
-	position: relative;
-	width: 5px;
-	height: 1px;
-	background-color: #646464;
-	margin: 0px 5px 0px 5px;
-}
-/* /Хлебные крошки*/
 
 /*Форма обратной связи*/
 .feedback{
@@ -630,28 +583,6 @@ section.footer{
 /*/Блоки*/
 
 /*Разное*/
-.pagination-items{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.pagination-items a{
-	color: #000;
-	width: 41px;
-	height: 41px;
-	display: flex;
-	flex-shrink: 0;
-	margin-right: 8px;
-	margin-bottom: 8px;
-	align-items: center;
-	text-decoration: none;
-	justify-content: center;
-	background-color: #f8f8f8;
-}
-a.pagination-item.active {
-	color: #fff;
-	background-color: #005c99;
-}
 .box-s{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;

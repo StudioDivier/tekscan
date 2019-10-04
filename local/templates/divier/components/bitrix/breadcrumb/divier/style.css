@@ -1,0 +1,31 @@
+.breadcrumb {
+    background-color: #f7f7f7;
+    padding: 25px 0 21px 0;
+    margin-bottom: 63px;
+}
+
+.breadcrumb-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-items a, .breadcrumb-items span {
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: #646464;
+    font-size: 13px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.breadcrumb-items a:after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 5px;
+    height: 1px;
+    background-color: #646464;
+    margin: 0 5px 0 5px;
+}

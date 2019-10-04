@@ -19,7 +19,7 @@ if (!empty($arResult)):?>
                         </div>
                     </div>
                 <? endforeach ?>
-        </div>
+            </div>
             <div class="container swiper-buttons-main-slider">
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

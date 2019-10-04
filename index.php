@@ -3,6 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Главная");
 ?>
 <?$APPLICATION->IncludeComponent("divier:banner", ".default", array())?>
+<?$APPLICATION->IncludeComponent("divier:sliders", ".default")?>
     <section class="map">
         <div id="map"></div>
         <div class="map-content">
