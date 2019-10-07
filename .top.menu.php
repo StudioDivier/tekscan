@@ -41,13 +41,13 @@ $aMenuLinks = Array(
     ),
     Array(
         "Каталог продукции",
-        "#",
+        "/catalog/",
         Array(),
         Array(
             "CHILDREN" => Array(
                 Array(
                     "NAME" => "Системы измерения удельного давления",
-                    "LINK" => "#"
+                    "LINK" => "/catalog/sistemy-izmereniya-udelnogo-davleniya/"
                 ),
                 Array(
                     "NAME" => "Системы измерения силы",
