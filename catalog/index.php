@@ -38,7 +38,7 @@ $APPLICATION->SetTitle("Каталог");
 		"DETAIL_META_KEYWORDS" => "-",
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
-		"DETAIL_PROPERTY_CODE" => array("SLIDES","SEO_TEXT","CML2_ARTICLE","CML2_BASE_UNIT","NEW_PRODUCT","HIT_PRODUCT",""),
+		"DETAIL_PROPERTY_CODE" => array("SLIDES","DOWNLOAD_FILE","SEO_TEXT","CML2_ARTICLE","CML2_BASE_UNIT","NEW_PRODUCT","HIT_PRODUCT",""),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
 		"DETAIL_SHOW_POPULAR" => "Y",
@@ -178,5 +178,15 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_STORE_PHONE" => "N",
 		"USE_STORE_SCHEDULE" => "N",
 		"VARIABLE_ALIASES" => array("compare"=>array("ACTION_CODE"=>"action",),)
+	)
+);?><?$APPLICATION->IncludeComponent(
+	"bitrix:subscribe.form",
+	"",
+	Array(
+		"CACHE_TIME" => "3600",
+		"CACHE_TYPE" => "A",
+		"PAGE" => "#SITE_DIR#about/subscr_edit.php",
+		"SHOW_HIDDEN" => "N",
+		"USE_PERSONALIZATION" => "Y"
 	)
 );?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

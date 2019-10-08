@@ -21,9 +21,6 @@ use \Bitrix\Main\Localization\Loc;
  */
 
 $this->setFrameMode(true);
-
-$this->addExternalCss(SITE_TEMPLATE_PATH . "/css/swiper/swiper.css");
-$this->addExternalJS(SITE_TEMPLATE_PATH . "/js/swiper/swiper.min.js");
 ?>
 <div class="system-items">
     <? foreach ($arResult["ITEMS"] as $item): ?>
@@ -48,68 +45,54 @@ $this->addExternalJS(SITE_TEMPLATE_PATH . "/js/swiper/swiper.min.js");
                 <?= $item["DETAIL_TEXT"] ?>
                 <div class="system-slider mb-63">
                     <div class="system-slider-block">
-                        <div class="swiper-container gallery-thumbs system-slider-1">
+                        <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
-                                <?foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value):?>
-                                    <div class="swiper-slide"><img src="<?=$value["PREVIEW_PICTURE"]?>"></div>
-                                <?endforeach;?>
-                                <?foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value):?>
-                                    <div class="swiper-slide"><img src="<?=$value["PREVIEW_PICTURE"]?>"></div>
-                                <?endforeach;?>
-                                <?foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value):?>
-                                    <div class="swiper-slide"><img src="<?=$value["PREVIEW_PICTURE"]?>"></div>
-                                <?endforeach;?>
+
+                                <? foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value): ?>
+                                    <div class="swiper-slide" data-index="<?= $i ?>"><img
+                                                src="<?= $value["PREVIEW_PICTURE"] ?>">
+                                    </div>
+
+                                <? endforeach; ?>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
                 </div>
-                <div class="text-18Light mb-60"><b>Электронная сборка: выбор и размещение</b></div>
                 <div class="system-slider mb-35">
                     <div class="system-slider-block">
-                        <div class="swiper-container system-slider-1 system-slider-1-1">
+                        <div class="swiper-container gallery-top system-slider-1-1">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="swiper-slider-flex">
-                                        <div class="slider-char-img">
-                                            <img src="../images/jpg/system-slider-1-1.jpg">
-                                        </div>
-                                        <div class="slider-char-text">
-                                            <div class="text-18Light mb-25"><b>Проблема:</b></div>
-                                            <div class="text-18Light mb-35">Чтобы получить четкие, проверяемые данные о
-                                                том, как роботизированная производственная система выполняет очень
-                                                специфические движения.
+                                <? foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value): ?>
+                                    <div class="swiper-slide">
+                                        <div class="text-18Light mb-60"><b><?= $value["NAME"] ?></b></div>
+                                        <div class="swiper-slider-flex">
+
+                                            <div class="slider-char-img">
+                                                <img src="<?= $value["DETAIL_PICTURE"] ?>" alt="<?= $value["NAME"] ?>">
                                             </div>
-                                            <ul class="red-dot text-18Light mb-40">
-                                                <li class="text-18Light">Фиксация изменений выравнивания давления в
-                                                    производственном процессе
-                                                </li>
-                                                <li class="text-18Light">Снижение рисков, которые могут привести к
-                                                    дефектам и повлиять на урожайность
-                                                </li>
-                                            </ul>
-                                            <div class="text-18Light mb-25"><b>Решение::</b></div>
-                                            <div class="text-18Light mb-35">Система I-Scan, используемая в процессе
-                                                настройки системы, была использована для проверки правильности
-                                                сопряжения всех роботизированных элементов.
+                                            <div class="slider-char-text">
+                                                <?= $value["DETAIL_TEXT"] ?>
                                             </div>
-                                            <ul class="red-dot text-18Light">
-                                                <li class="text-18Light">Фиксация изменений выравнивания давления в
-                                                    производственном процессе
-                                                </li>
-                                                <li class="text-18Light">Снижение рисков, которые могут привести к
-                                                    дефектам и повлиять на урожайность
-                                                </li>
-                                            </ul>
                                         </div>
                                     </div>
-                                </div>
+                                <? endforeach; ?>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                     </div>
+                </div>
+                <? if ($item["PROPERTIES"]["DOWNLOAD_FILE"]["VALUE"]): ?>
+                    <div class="red-download"><a href="<?= $item["PROPERTIES"]["DOWNLOAD_FILE"]["VALUE"] ?>">Скачать
+                            остальные применения данной системы <img src="<?= $templateFolder ?>/images/red-download.png"
+                                                                     alt="Скачать остальные применения данной системы">
+                        </a>
+                    </div>
+                <? endif ?>
+                <div class="blue-button-dropdown system-item-block-button-click"><a href="javascript:void(0)">Свернуть
+                        описание <img src="<?= $templateFolder ?>/images/blue-arrow-up.png" alt="Свернуть описание"></a>
                 </div>
             </div>
         </div>

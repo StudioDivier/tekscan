@@ -4,26 +4,27 @@ $(function () {
         var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 30,
             slidesPerView: 'auto',
-            // freeMode: true,
-            // watchSlidesVisibility: true,
-            // watchSlidesProgress: true,
-            initialSlide: 3,
             loop: true,
-            clickable: true,
+            loopedSlides: 3,
+            initialSlide: 0,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            // navigation: {
+            //     nextEl: '.swiper-button-next',
+            //     prevEl: '.swiper-button-prev'
+            // },
+        });
+
+        var galleryTop = new Swiper('.gallery-top', {
+            slidesPerView: 1,
+            loopedSlides: 5,
+            loop: true,
             navigation: {
                 nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
+                prevEl: '.swiper-button-prev'
+            },
         });
-        // var swiper = new Swiper('.system-slider-1.swiper-container', {
-        //     slidesPerView: 'auto',
-        //     spaceBetween: 30,
-        //     loop: true,
-        //     initialSlide: 3,
-        //     navigation: {
-        //         nextEl: '.swiper-button-next',
-        //         prevEl: '.swiper-button-prev',
-        //     }
-        // });
+        galleryTop.controller.control = galleryThumbs;
+        galleryThumbs.controller.control = galleryTop;
     })
 });

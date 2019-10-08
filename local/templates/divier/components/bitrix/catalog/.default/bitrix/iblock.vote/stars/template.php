@@ -38,7 +38,7 @@ if (isset($arParams["AJAX_CALL"]) && $arParams["AJAX_CALL"]=="Y")
 	return;
 }
 
-CJSCore::Init(array("ajax"));
+//CJSCore::Init(array("ajax"));
 $strObName = "bx_vo_".$arParams["IBLOCK_ID"]."_".$arParams["ELEMENT_ID"].'_'.$this->randString();
 $arJSParams = array(
 	"progressId" => $strObName."_progr",
