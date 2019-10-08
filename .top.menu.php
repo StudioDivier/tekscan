@@ -27,7 +27,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "Услуги",
-        "#",
+        "/services/",
         Array(),
         Array(),
         ""
@@ -51,11 +51,11 @@ $aMenuLinks = Array(
                 ),
                 Array(
                     "NAME" => "Системы измерения силы",
-                    "LINK" => "#"
+                    "LINK" => "/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
                 ),
                 Array(
                     "NAME" => "Встраиваемые датчики распределения давления и силы",
-                    "LINK" => "#"
+                    "LINK" => "/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
                 )
             )
         ),

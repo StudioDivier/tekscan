@@ -1,13 +1,13 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости");
-?>
-<?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Статьи");
+?><p>
+	 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"",
 	Array(
-		"ADD_ELEMENT_CHAIN" => "Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -57,7 +57,7 @@ $APPLICATION->SetTitle("Новости");
 		"PAGER_TEMPLATE" => "divier",
 		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/news/",
+		"SEF_FOLDER" => "/stati/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","rss"=>"rss/","rss_section"=>"#SECTION_ID#/rss/","search"=>"search/","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
@@ -80,4 +80,5 @@ $APPLICATION->SetTitle("Новости");
 		"YANDEX" => "N"
 	)
 );?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+</p>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

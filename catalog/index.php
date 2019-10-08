@@ -179,14 +179,4 @@ $APPLICATION->SetTitle("Каталог");
 		"USE_STORE_SCHEDULE" => "N",
 		"VARIABLE_ALIASES" => array("compare"=>array("ACTION_CODE"=>"action",),)
 	)
-);?><?$APPLICATION->IncludeComponent(
-	"bitrix:subscribe.form",
-	"",
-	Array(
-		"CACHE_TIME" => "3600",
-		"CACHE_TYPE" => "A",
-		"PAGE" => "#SITE_DIR#about/subscr_edit.php",
-		"SHOW_HIDDEN" => "N",
-		"USE_PERSONALIZATION" => "Y"
-	)
 );?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -62,7 +62,7 @@ $this->setFrameMode(true);
         "FILTER_NAME" => $arParams["FILTER_NAME"],
         "HIDE_LINK_WHEN_NO_DETAIL" => $arParams["HIDE_LINK_WHEN_NO_DETAIL"],
         "CHECK_DATES" => $arParams["CHECK_DATES"],
-//        "PARENT_SECTION_CODE" => ($APPLICATION->GetCurPage() == "/news/" ? "news" : "stati")
+        "PARENT_SECTION_CODE" => ($APPLICATION->GetCurPage() == "/news/" ? "news" : "stati")
     ),
     $component
 ); ?>
