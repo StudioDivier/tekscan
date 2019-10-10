@@ -1,52 +1,162 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Услуги");
-?>
-	<p>Наш Банк предоставляет физическим лицам большое число различных возможностей, связанных с сохранением средств и совершением различных сделок. В частности, банк предлагает своим клиентам широкую линейку разнообразных вкладов, способных удовлетворить как долгосрочные, так и краткосрочные интересы, касающиеся размещения свободных средств по выгодным ставкам. В своей работе Банк активно применяет инновационные технологии динамично развивающейся банковской сферы.</p> 
-	<p>Банк предлагает своим клиентам качественный универсальный сервис по следующим направлениям:</p>
-	<ul> 
-		<li><a href="fiz/cards.php">Банковские карты</a></li> 
-		<li><a href="fiz/credit.php">Потребительский кредит</a></li> 
-	</ul>
-	<br />
-	   <h1>Малому и среднему бизнесу</h1>
-						 
-      <p>Работа с предприятиями малого и среднего бизнеса - одно из стратегически важных направлений деятельности Банка. Наш Банк представляет современные программы обслуживания малого и среднего бизнеса, обеспечивает оптимальные и взаимовыгодные варианты сотрудничества, в основе которых лежит профессионализм сотрудников и высокое качество банковских услуг. Услуги нашего Банка отличаются оперативностью и надежностью, так как ориентированы на деловых людей - на тех, кто ценит свое время и деньги.</p>
-     
-      <p>Банк предлагает следующие виды услуг для предприятий малого и среднего бизнеса:</p>
-     
-      <ul> 
-        <li><a href="smallbusiness/credit.php">Кредитование</a></li>
-       
-        <li><a href="smallbusiness/leazing.php">Лизинг</a></li>
-       
-        <li><a href="smallbusiness/deposits.php">Депозиты</a></li>
-       
-        <li><a href="smallbusiness/cards.php">Пластиковые карты</a></li>
-      </ul>
-      <br />
-    <h1>Корпоративным клиентам</h1>
-    <p>Банк является одним из лидеров банковского рынка по обслуживанию корпоративных клиентов. 
-    Комплексное банковское обслуживание на основе максимального использования конкурентных преимуществ и возможностей Банка позволяет создать устойчивую 
-    финансовую платформу для развития бизнеса предприятий и холдингов различных отраслей экономики. Уже более 15 лет Банк работает для своих клиентов, 
-    являясь образцом надежности и высокого профессионализма.</p> 
-    <p>Наш Банк предлагает корпоративным клиентам следующие виды услуг:</p>
-    <ul> 
-        <li><a href="corp/rko.php">Расчетно-кассовое обслуживание</a></li> 
-        <li><a href="corp/incass.php">Инкассация</a></li> 
-        <li><a href="corp/ibank.php">Интернет-банкинг</a></li> 
-    </ul> 
-    <br />	
-    <h1>Финансовым организациям</h1>
-
-    <p>Активное сотрудничество на финансовых рынках представляет собой одну из наиболее важных сторон бизнеса и является перспективным направлением деятельности нашего Банка. Политика банка направлена на расширение сотрудничества, увеличение объемов взаимных кредитных линий. Солидная деловая репутация Банка на рынке межбанковских операций способствует налаживанию стабильных и взаимовыгодных партнерских отношений с самыми крупными и надежными банками страны.</p> 
-    <p>Особое внимание Банк уделяет развитию взаимоотношений с международными финансовыми институтами. Финансирование долгосрочных и среднесрочных проектов клиентов за счет привлечения средств на международных рынках капитала - одно из приоритетных направлений деятельности Банка. Наш Банк имеет развитую сеть корреспондентских счетов, что позволяет быстро и качественно осуществлять расчеты  в различных валютах. Поручения клиентов могут быть исполнены Банком в сжатые сроки.</p> 
-    <p>В целях минимизации рисков при поведении операций на финансовых рынках наш Банк максимально требовательно подходит к выбору своих банков-контрагентов. </p> 
-     
-    <p>В данном направлении Банк предлагает финансовым организациям следующие услуги:</p>
-    <ul> 
-    <li><a href="financialorg/mbank.php">Услуги на межбанковском рынке</a></li> 
-    <li><a href="financialorg/depservices.php">Депозитарные услуги</a></li> 
-    <li><a href="financialorg/docoper.php">Документарные операции</a></li> 
-    </ul> 	
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent(
+	"bitrix:catalog",
+	"services",
+	Array(
+		"ACTION_VARIABLE" => "action",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_PICT_PROP" => "-",
+		"ADD_PROPERTIES_TO_BASKET" => "Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"BASKET_URL" => "/personal/basket.php",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"COMPATIBLE_MODE" => "Y",
+		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
+		"DETAIL_BACKGROUND_IMAGE" => "-",
+		"DETAIL_BRAND_USE" => "N",
+		"DETAIL_BROWSER_TITLE" => "-",
+		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
+		"DETAIL_DETAIL_PICTURE_MODE" => array(),
+		"DETAIL_DISPLAY_NAME" => "Y",
+		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "H",
+		"DETAIL_IMAGE_RESOLUTION" => "16by9",
+		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => array(),
+		"DETAIL_META_DESCRIPTION" => "-",
+		"DETAIL_META_KEYWORDS" => "-",
+		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
+		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
+		"DETAIL_PROPERTY_CODE" => array(),
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_SHOW_POPULAR" => "Y",
+		"DETAIL_SHOW_SLIDER" => "N",
+		"DETAIL_SHOW_VIEWED" => "Y",
+		"DETAIL_STRICT_SECTION_CHECK" => "N",
+		"DETAIL_USE_COMMENTS" => "N",
+		"DETAIL_USE_VOTE_RATING" => "N",
+		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_SORT_FIELD" => "shows",
+		"ELEMENT_SORT_FIELD2" => "shows",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_ORDER2" => "asc",
+		"FILTER_FIELD_CODE" => array("DATE_ACTIVE_FROM",""),
+		"FILTER_HIDE_ON_MOBILE" => "N",
+		"FILTER_NAME" => "",
+		"FILTER_PRICE_CODE" => array(),
+		"FILTER_PROPERTY_CODE" => array("",""),
+		"FILTER_VIEW_MODE" => "HORIZONTAL",
+		"IBLOCK_ID" => "7",
+		"IBLOCK_TYPE" => "catalog",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"INSTANT_RELOAD" => "N",
+		"LABEL_PROP" => array(),
+		"LAZY_LOAD" => "N",
+		"LINE_ELEMENT_COUNT" => "3",
+		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
+		"LINK_IBLOCK_ID" => "",
+		"LINK_IBLOCK_TYPE" => "",
+		"LINK_PROPERTY_SID" => "",
+		"LIST_BROWSER_TITLE" => "-",
+		"LIST_ENLARGE_PRODUCT" => "STRICT",
+		"LIST_META_DESCRIPTION" => "-",
+		"LIST_META_KEYWORDS" => "-",
+		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"LIST_PROPERTY_CODE" => array("IN_STOCK", "PRICE", "WHOLESALE", "RETAIL"),
+		"LIST_PROPERTY_CODE_MOBILE" => array(),
+		"LIST_SHOW_SLIDER" => "Y",
+		"LIST_SLIDER_INTERVAL" => "3000",
+		"LIST_SLIDER_PROGRESS" => "N",
+		"LOAD_ON_SCROLL" => "N",
+		"MESSAGE_404" => "",
+		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
+		"MESS_BTN_BUY" => "Купить",
+		"MESS_BTN_COMPARE" => "Сравнение",
+		"MESS_BTN_DETAIL" => "Подробнее",
+		"MESS_BTN_SUBSCRIBE" => "Подписаться",
+		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Товары",
+		"PAGE_ELEMENT_COUNT" => "30",
+		"PARTIAL_PRODUCT_PROPERTIES" => "N",
+		"PRICE_CODE" => array(),
+		"PRICE_VAT_INCLUDE" => "Y",
+		"PRICE_VAT_SHOW_VALUE" => "N",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRODUCT_PROPERTIES" => array(),
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+		"SEARCH_CHECK_DATES" => "Y",
+		"SEARCH_NO_WORD_LOGIC" => "Y",
+		"SEARCH_PAGE_RESULT_COUNT" => "50",
+		"SEARCH_RESTART" => "N",
+		"SEARCH_USE_LANGUAGE_GUESS" => "Y",
+		"SECTIONS_SHOW_PARENT_NAME" => "Y",
+		"SECTIONS_VIEW_MODE" => "LIST",
+		"SECTION_BACKGROUND_IMAGE" => "-",
+		"SECTION_COUNT_ELEMENTS" => "Y",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"SECTION_TOP_DEPTH" => "2",
+		"SEF_FOLDER" => "/services/",
+		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("compare"=>"compare.php?action=#ACTION_CODE#","element"=>"#SECTION_CODE#/#ELEMENT_CODE#/","section"=>"#SECTION_CODE#/","sections"=>"","smart_filter"=>"#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/"),
+		"SET_LAST_MODIFIED" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SHOW_DEACTIVATED" => "N",
+		"SHOW_PRICE_COUNT" => "1",
+		"SHOW_TOP_ELEMENTS" => "Y",
+		"SIDEBAR_DETAIL_POSITION" => "right",
+		"SIDEBAR_DETAIL_SHOW" => "N",
+		"SIDEBAR_PATH" => "",
+		"SIDEBAR_SECTION_POSITION" => "right",
+		"SIDEBAR_SECTION_SHOW" => "Y",
+		"TEMPLATE_THEME" => "",
+		"TOP_ELEMENT_COUNT" => "9",
+		"TOP_ELEMENT_SORT_FIELD" => "shows",
+		"TOP_ELEMENT_SORT_FIELD2" => "shows",
+		"TOP_ELEMENT_SORT_ORDER" => "asc",
+		"TOP_ELEMENT_SORT_ORDER2" => "asc",
+		"TOP_ENLARGE_PRODUCT" => "STRICT",
+		"TOP_LINE_ELEMENT_COUNT" => "3",
+		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"TOP_PROPERTY_CODE" => array("",""),
+		"TOP_PROPERTY_CODE_MOBILE" => array(),
+		"TOP_ROTATE_TIMER" => "30",
+		"TOP_SHOW_SLIDER" => "Y",
+		"TOP_SLIDER_INTERVAL" => "3000",
+		"TOP_SLIDER_PROGRESS" => "N",
+		"TOP_VIEW_MODE" => "BANNER",
+		"USER_CONSENT" => "N",
+		"USER_CONSENT_ID" => "0",
+		"USER_CONSENT_IS_CHECKED" => "Y",
+		"USER_CONSENT_IS_LOADED" => "N",
+		"USE_COMPARE" => "N",
+		"USE_ELEMENT_COUNTER" => "Y",
+		"USE_ENHANCED_ECOMMERCE" => "N",
+		"USE_FILTER" => "Y",
+		"USE_MAIN_ELEMENT_SECTION" => "N",
+		"USE_PRICE_COUNT" => "N",
+		"USE_PRODUCT_QUANTITY" => "N",
+		"USE_REVIEW" => "N",
+		"USE_STORE" => "N"
+	)
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

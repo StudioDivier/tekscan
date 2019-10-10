@@ -47,13 +47,18 @@ $this->setFrameMode(true);
                     <div class="system-slider-block">
                         <div class="swiper-container gallery-thumbs">
                             <div class="swiper-wrapper">
-
                                 <? foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value): ?>
-                                    <div class="swiper-slide" data-index="<?= $i ?>"><img
+                                    <div class="swiper-slide"><img
                                                 src="<?= $value["PREVIEW_PICTURE"] ?>">
                                     </div>
-
                                 <? endforeach; ?>
+                                <? if (count($item["PROPERTIES"]["SLIDES"]["VALUE"]) < 3): ?>
+                                    <? foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value): ?>
+                                        <div class="swiper-slide"><img
+                                                    src="<?= $value["PREVIEW_PICTURE"] ?>">
+                                        </div>
+                                    <? endforeach; ?>
+                                <? endif; ?>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -78,6 +83,22 @@ $this->setFrameMode(true);
                                         </div>
                                     </div>
                                 <? endforeach; ?>
+                                <? if (count($item["PROPERTIES"]["SLIDES"]["VALUE"]) < 3): ?>
+                                    <? foreach ($item["PROPERTIES"]["SLIDES"]["VALUE"] as $value): ?>
+                                        <div class="swiper-slide">
+                                            <div class="text-18Light mb-60"><b><?= $value["NAME"] ?></b></div>
+                                            <div class="swiper-slider-flex">
+
+                                                <div class="slider-char-img">
+                                                    <img src="<?= $value["DETAIL_PICTURE"] ?>" alt="<?= $value["NAME"] ?>">
+                                                </div>
+                                                <div class="slider-char-text">
+                                                    <?= $value["DETAIL_TEXT"] ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <? endforeach; ?>
+                                <? endif;?>
                             </div>
                         </div>
                         <div class="swiper-button-next"></div>
@@ -86,8 +107,9 @@ $this->setFrameMode(true);
                 </div>
                 <? if ($item["PROPERTIES"]["DOWNLOAD_FILE"]["VALUE"]): ?>
                     <div class="red-download"><a href="<?= $item["PROPERTIES"]["DOWNLOAD_FILE"]["VALUE"] ?>">Скачать
-                            остальные применения данной системы <img src="<?= $templateFolder ?>/images/red-download.png"
-                                                                     alt="Скачать остальные применения данной системы">
+                            остальные применения данной системы <img
+                                    src="<?= $templateFolder ?>/images/red-download.png"
+                                    alt="Скачать остальные применения данной системы">
                         </a>
                     </div>
                 <? endif ?>

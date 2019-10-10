@@ -51,11 +51,11 @@ $aMenuLinks = Array(
                 ),
                 Array(
                     "NAME" => "Системы измерения силы",
-                    "LINK" => "/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
+                    "LINK" => "/catalog/sistemy-izmereniya-sily/"
                 ),
                 Array(
                     "NAME" => "Встраиваемые датчики распределения давления и силы",
-                    "LINK" => "/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
+                    "LINK" => "/catalog/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
                 )
             )
         ),
