@@ -1,0 +1,143 @@
+.feedback {
+    padding: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+
+}
+
+.feedback-title {
+    text-align: center;
+    margin-bottom: 43px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.feedback-input-list {
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 48%;
+    margin-right: 62px;
+}
+
+.feedback-input-list input {
+    width: 100%;
+    height: 49px;
+    border: none;
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 17px;
+    box-sizing: border-box;
+}
+
+.feedback-textarea-list {
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 48%;
+}
+
+.feedback-textarea {
+    margin-bottom: 17px;
+}
+
+.feedback-textarea textarea {
+    width: 100%;
+    border: none;
+    height: 115px;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.feedback-button {
+    margin-bottom: 14px;
+}
+
+.feedback-button button {
+    width: 100%;
+    height: 49px;
+    color: #c11a19;
+    text-decoration: none;
+    border: 1px solid #c11a19;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    background: none;
+    cursor: pointer;
+}
+
+.feedback-button button:hover {
+    color: #fff;
+    background-color: #c11a19;
+}
+
+.privacy-pol p {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.privacy-pol input {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: none;
+    border-right: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.privacy-pol p, .privacy-pol p a {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.error {
+    border: 2px solid #c11a19 !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+    -moz-appearance: number-input;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+table p {
+    margin-bottom: 35px;
+}
