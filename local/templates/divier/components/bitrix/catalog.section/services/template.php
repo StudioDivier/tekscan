@@ -188,7 +188,7 @@ if (isset($_POST["tile"])) {
                         </div>
                     </div>
                 </div>
-
+                <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
                 <div class="button-exit button-exit-x">x</div>
             </div>
         </div>
@@ -214,19 +214,13 @@ if (isset($_POST["tile"])) {
                 <div class="modal-services-question-text">Оставьте свой номер телефона и представитель компании с вами
                     свяжется.
                 </div>
-                <div class="modal-services-question-input-phone">
-                    <p>+7</p>
-                    <input class="modal-services-question-firs-input">
-                    <input class="modal-services-question-second-input">
-                </div>
-                <div class="modal-services-question-button"><a href="#">Отправить</a></div>
-                <div class="privacy-pol">
-                    <p><input type="checkbox">
-                        <span>Даю согласие на обработку моих персональных данных. Соглашаюсь с  <a href="#"> Политике конфиденциальности</a>и ознакомлен с <a
-                                    href="#"> Политикой в отношении обработки персональных данных.</a></span></p>
-                </div>
+                <?$APPLICATION->IncludeComponent("divier:backCall", "")?>
                 <div class="button-exit button-exit-x">x</div>
             </div>
         </div>
     </div>
+</div>
+<?$APPLICATION->IncludeComponent("divier:about", "")?>
+<div class="mb-110">
+    <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
 </div>

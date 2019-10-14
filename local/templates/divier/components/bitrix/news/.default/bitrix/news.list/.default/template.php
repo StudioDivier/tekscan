@@ -42,5 +42,7 @@ $this->setFrameMode(true);
         </div>
         <?= $arResult["NAV_STRING"] ?>
     </div>
+    <div class="mb-110">
     <?$APPLICATION->IncludeComponent("divier:subscribe", "");?>
+    </div>
 </section>

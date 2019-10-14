@@ -1,5 +1,5 @@
 $(function () {
-    $(".subscribe_form").submit(function (e) {
+    $(".call_back").submit(function (e) {
         let form = $(this);
         $.ajax({
             type: form.attr('method'),

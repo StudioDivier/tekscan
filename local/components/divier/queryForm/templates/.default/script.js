@@ -1,5 +1,5 @@
 $(function () {
-    $(".subscribe_form").submit(function (e) {
+    $(".queryForm").submit(function (e) {
         let form = $(this);
         $.ajax({
             type: form.attr('method'),

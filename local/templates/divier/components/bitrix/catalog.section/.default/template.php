@@ -116,6 +116,8 @@ $this->setFrameMode(true);
                 <div class="blue-button-dropdown system-item-block-button-click"><a href="javascript:void(0)">Свернуть
                         описание <img src="<?= $templateFolder ?>/images/blue-arrow-up.png" alt="Свернуть описание"></a>
                 </div>
+                <div class="button-hide-form mb-45"><a href="javascript:void(0)">Скрыть форму запроса</a></div>
+                <?$APPLICATION->IncludeComponent("divier:queryForm", "")?>
             </div>
         </div>
     <? endforeach; ?>

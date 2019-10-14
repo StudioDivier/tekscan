@@ -99,6 +99,9 @@ $this->setFrameMode(true); ?>
                 </div>
             </div>
         <? endforeach; ?>
-        <?$APPLICATION->IncludeComponent("divier:subscribe","")?>
+        <?$APPLICATION->IncludeComponent("divier:about", "")?>
+        <div class="mb-110">
+            <?$APPLICATION->IncludeComponent("divier:subscribe","")?>
+        </div>
     </div>
 </section>

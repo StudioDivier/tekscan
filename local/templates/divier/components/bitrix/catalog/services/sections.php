@@ -227,5 +227,9 @@ $this->setFrameMode(true); ?>
             ),
             $component
         ); ?>
+        <?$APPLICATION->IncludeComponent("divier:about", "")?>
+        <div class="mb-110">
+            <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
+        </div>
     </div>
 </div>

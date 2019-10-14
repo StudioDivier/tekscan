@@ -1,5 +1,5 @@
 $(function () {
-    $(".siphbc-one").click(function () {
+    $(".siphbc-two ").click(function () {
         let src = $(this).closest(".services-item").find(".services-item-product-image img").attr("src");
         let name = $(this).closest(".services-item").find(".services-item-product-name").html();
         let price = $(this).closest(".services-item").find(".services-price").html();
@@ -17,7 +17,7 @@ $(function () {
     });
 
 
-    $(".siphbc-two").click(function () {
+    $(".siphbc-one").click(function () {
         let src = $(this).closest(".services-item").find(".services-item-product-image img").attr("src");
         let name = $(this).closest(".services-item").find(".services-item-product-name").html();
         let price = $(this).closest(".services-item").find(".services-price").html();
