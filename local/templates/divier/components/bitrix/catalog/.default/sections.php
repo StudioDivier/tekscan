@@ -145,5 +145,7 @@ $this->setFrameMode(true);?>
             ),
             $component
         ); ?>
+        <?$APPLICATION->IncludeComponent("divier:about", "")?>
+        <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
     </div>
 </section>

@@ -1,8 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <div class="pagination-items mb-63">
     <?
-    if(!$arResult["NavShowAlways"])
-    {
+    if (!$arResult["NavShowAlways"]) {
         if ($arResult["NavRecordCount"] == 0 || ($arResult["NavPageCount"] == 1 && $arResult["NavShowAll"] == false))
             return;
     }
@@ -36,7 +35,7 @@
     <? if ($arResult["NavPageNomer"] == $arResult["nStartPage"]): ?>
         <span class="pagination-item pagination-item-image">
                 <img src="<?= $templateFolder ?>/images/pagin-arrow-left_disabled.png" alt="Назад">
-            </span>
+        </span>
     <? else: ?>
         <a href="<?= $sPrevHref ?>" class="pagination-item pagination-item-image">
             <img src="<?= $templateFolder ?>/images/pagin-arrow-left.png" alt="Назад">

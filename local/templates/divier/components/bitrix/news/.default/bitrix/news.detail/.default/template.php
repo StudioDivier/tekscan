@@ -17,5 +17,6 @@ $this->setFrameMode(true);
         <div class="news-card-date"><?= $arResult["ACTIVE_FROM"] ?></div>
         <div class="title"><?= $arResult["NAME"] ?></div>
         <div class="text"><?= $arResult["DETAIL_TEXT"] ?></div>
+        <?$APPLICATION->IncludeComponent("divier:subscribe", "");?>
     </div>
 </section>

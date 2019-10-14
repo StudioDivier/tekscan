@@ -1,5 +1,4 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
-
 <div class="mb-110">
     <div class="feedback">
         <div class="feedback-title title-38s">Форма обратной связи</div>

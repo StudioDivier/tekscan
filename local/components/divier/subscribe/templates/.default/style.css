@@ -130,14 +130,6 @@ ul:not(.header-menu-items) {
     margin-bottom: 40px;
 }
 
-ul li {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 34px;
-}
-
 table p {
     margin-bottom: 35px;
 }

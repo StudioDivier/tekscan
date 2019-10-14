@@ -31,12 +31,16 @@ $this->setFrameMode(true);
                         <div class="news-search-item__date"><?= $arItem["ACTIVE_FROM"] ?></div>
                         <div class="news-search-item__name"><?= $arItem["NAME"] ?></div>
                         <div class="news-search-item__des text-18Light"><?= substr($arItem["PREVIEW_TEXT"], 0, 308) . '...' ?></div>
-                        <div class="news-search-item__button"><a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Подробнее<img
-                                        src="<?= $templateFolder ?>/images/blue-arrow-right.png"> </a></div>
+                        <div class="news-search-item__button">
+                            <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Подробнее
+                                <img src="<?= $templateFolder ?>/images/blue-arrow-right.png">
+                            </a>
+                        </div>
                     </div>
                 </div>
             <? endforeach; ?>
         </div>
         <?= $arResult["NAV_STRING"] ?>
     </div>
+    <?$APPLICATION->IncludeComponent("divier:subscribe", "");?>
 </section>

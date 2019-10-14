@@ -66,7 +66,9 @@ $arFilter = array(
         "SORT_ORDER2" => "ASC",
         "STRICT_SECTION_CHECK" => "N"
     )
-); ?><? $APPLICATION->IncludeComponent(
+); ?>
+<?$APPLICATION->IncludeComponent("divier:about", "")?>
+<? $APPLICATION->IncludeComponent(
     "divier:sliders",
     ".default",
     Array()
