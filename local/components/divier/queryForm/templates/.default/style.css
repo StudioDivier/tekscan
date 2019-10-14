@@ -12,8 +12,12 @@
     margin-bottom: 43px;
 }
 
-form.queryForm {
+.queryForm {
     display: block;
+}
+
+.queryForm.d-none {
+    display: none;
 }
 
 .feedback-input-list {
