@@ -63,7 +63,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "FAQ",
-        "#",
+        "/faq/",
         Array(),
         Array(),
         ""
