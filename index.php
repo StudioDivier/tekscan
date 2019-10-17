@@ -7,6 +7,7 @@ $APPLICATION->SetTitle("Главная");
     Array()
 ); ?>
 <? $APPLICATION->IncludeComponent("divier:catalog_on_main", ".default"); ?>
+<?$APPLICATION->IncludeComponent("divier:about", "")?>
 <? global $arFilter;
 $arFilter = array(
     "PROPERTY_SHOW_ON_MAIN_VALUE" => "Y"
@@ -67,7 +68,6 @@ $arFilter = array(
         "STRICT_SECTION_CHECK" => "N"
     )
 ); ?>
-<?$APPLICATION->IncludeComponent("divier:about", "")?>
 <? $APPLICATION->IncludeComponent(
     "divier:sliders",
     ".default",

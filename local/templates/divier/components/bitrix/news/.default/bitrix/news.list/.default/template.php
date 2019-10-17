@@ -25,11 +25,11 @@ $this->setFrameMode(true);
                 ?>
                 <div class="news-search-item">
                     <div class="news-search-item__img">
-                        <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>">
+                        <a href="<?= $arItem["DETAIL_PAGE_URL"]["SRC"] ?>"><img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["NAME"] ?>"></a>
                     </div>
                     <div class="news-search-item__text">
                         <div class="news-search-item__date"><?= $arItem["ACTIVE_FROM"] ?></div>
-                        <div class="news-search-item__name"><?= $arItem["NAME"] ?></div>
+                        <div class="news-search-item__name"><a href="<?= $arItem["DETAIL_PAGE_URL"]["SRC"] ?>"><?= $arItem["NAME"] ?></a></div>
                         <div class="news-search-item__des text-18Light"><?= substr($arItem["PREVIEW_TEXT"], 0, 308) . '...' ?></div>
                         <div class="news-search-item__button">
                             <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>">Подробнее
@@ -40,9 +40,9 @@ $this->setFrameMode(true);
                 </div>
             <? endforeach; ?>
         </div>
+        <div class="mb-110">
+            <?$APPLICATION->IncludeComponent("divier:subscribe", "");?>
+        </div>
         <?= $arResult["NAV_STRING"] ?>
-    </div>
-    <div class="mb-110">
-    <?$APPLICATION->IncludeComponent("divier:subscribe", "");?>
     </div>
 </section>

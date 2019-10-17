@@ -133,7 +133,7 @@ $this->setFrameMode(true); ?>
                 "SHOW_404" => $arParams["SHOW_404"],
                 "FILE_404" => $arParams["FILE_404"],
                 "DISPLAY_COMPARE" => $arParams["USE_COMPARE"],
-                "PAGE_ELEMENT_COUNT" => $arParams["PAGE_ELEMENT_COUNT"],
+                "PAGE_ELEMENT_COUNT" => "8",
                 "LINE_ELEMENT_COUNT" => $arParams["LINE_ELEMENT_COUNT"],
                 "PRICE_CODE" => $arParams["~PRICE_CODE"],
                 "USE_PRICE_COUNT" => $arParams["USE_PRICE_COUNT"],
@@ -146,10 +146,10 @@ $this->setFrameMode(true); ?>
                 "PRODUCT_PROPERTIES" => (isset($arParams["PRODUCT_PROPERTIES"]) ? $arParams["PRODUCT_PROPERTIES"] : []),
 
                 "DISPLAY_TOP_PAGER" => $arParams["DISPLAY_TOP_PAGER"],
-                "DISPLAY_BOTTOM_PAGER" => $arParams["DISPLAY_BOTTOM_PAGER"],
+                "DISPLAY_BOTTOM_PAGER" => "Y",
                 "PAGER_TITLE" => $arParams["PAGER_TITLE"],
                 "PAGER_SHOW_ALWAYS" => $arParams["PAGER_SHOW_ALWAYS"],
-                "PAGER_TEMPLATE" => $arParams["PAGER_TEMPLATE"],
+                "PAGER_TEMPLATE" => "divier",
                 "PAGER_DESC_NUMBERING" => $arParams["PAGER_DESC_NUMBERING"],
                 "PAGER_DESC_NUMBERING_CACHE_TIME" => $arParams["PAGER_DESC_NUMBERING_CACHE_TIME"],
                 "PAGER_SHOW_ALL" => $arParams["PAGER_SHOW_ALL"],
@@ -167,7 +167,8 @@ $this->setFrameMode(true); ?>
 //                "OFFERS_SORT_ORDER" => $sortOrder,
                 "OFFERS_SORT_FIELD2" => $arParams["OFFERS_SORT_FIELD2"],
                 "OFFERS_SORT_ORDER2" => $arParams["OFFERS_SORT_ORDER2"],
-                "OFFERS_LIMIT" => (isset($arParams["LIST_OFFERS_LIMIT"]) ? $arParams["LIST_OFFERS_LIMIT"] : 0),
+//                "OFFERS_LIMIT" => (isset($arParams["LIST_OFFERS_LIMIT"]) ? $arParams["LIST_OFFERS_LIMIT"] : 0),
+//                "OFFERS_LIMIT" => "1",
 
 //        "SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
 //        "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
@@ -227,9 +228,5 @@ $this->setFrameMode(true); ?>
             ),
             $component
         ); ?>
-        <?$APPLICATION->IncludeComponent("divier:about", "")?>
-        <div class="mb-110">
-            <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
-        </div>
     </div>
 </div>

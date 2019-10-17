@@ -34,7 +34,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "Анонсы",
-        "#",
+        "/preview/",
         Array(),
         Array(),
         ""
@@ -70,7 +70,7 @@ $aMenuLinks = Array(
     ),
     Array(
         "Контакты",
-        "#",
+        "/contacts/",
         Array(),
         Array(),
         ""

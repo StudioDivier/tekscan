@@ -10,14 +10,72 @@
 ?>
 <section class="system">
     <div class="container">
+        <div class="services-sort">
+            <div class="services-sort-block">
+                <form action="<?= $APPLICATION->GetCurPage() ?>" method="post">
+                    <label for="sort">Сортировка</labeL>
+                    <select id="sort" name="sort">
+                        <option <?= ($_POST["sort"] == "sort") ? "selected" : "" ?> value="sort">По порядку</option>
+                        <option <?= ($_POST["sort"] == "price_asc") ? "selected" : "" ?> value="price_asc">По росту
+                            цены
+                        </option>
+                        <option <?= ($_POST["sort"] == "price_desc") ? "selected" : "" ?> value="price_desc">По снижению
+                            цены
+                        </option>
+                        <option <?= ($_POST["sort"] == "new") ? "selected" : "" ?> value="new">По новизне</option>
+                    </select>
+                    <input type="hidden" name="tile" value="Y">
+                </form>
+            </div>
+            <?
+            if (isset($_POST["tile"])) {
+                if ($_POST["tile"] == "Y") {
+                    $tabOne = "/images/tab-1_grey.png";
+                    $tabTwo = "/images/tab-2_red.png";
+                } else {
+                    $tabOne = "/images/tab-1_red.png";
+                    $tabTwo = "/images/tab-2_grey.png";
+                }
+            } else {
+                $tabOne = "/images/tab-1_grey.png";
+                $tabTwo = "/images/tab-2_red.png";
+            } ?>
+            <div class="tab">
+                <div class="tab-one"><img src="<?= $templateFolder . $tabOne ?>" alt="Списком"></div>
+                <div class="tab-two"><img src="<?= $templateFolder . $tabTwo ?>" alt="Сеткой"></div>
+            </div>
+        </div>
+        <? if (isset($_POST["sort"])) {
+            switch ($_POST["sort"]) {
+                case "price_asc":
+                    $sortField = "PROPERTY_PRICE";
+                    $sortOrder = "ASC";
+                    break;
+                case "price_desc":
+                    $sortField = "PROPERTY_PRICE";
+                    $sortOrder = "DESC";
+                    break;
+                case "new":
+                    $sortField = "DATE_CREATE";
+                    $sortOrder = "ASC";
+                    break;
+                case "sort":
+                    $sortField = "SORT";
+                    $sortOrder = "ASC";
+                    break;
+            }
+        } else {
+            $sortField = "SORT";
+            $sortOrder = "ASC";
+        } ?>
         <? $APPLICATION->IncludeComponent(
             "bitrix:catalog.section",
             "services",
             array(
                 "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                 "IBLOCK_ID" => $arParams["IBLOCK_ID"],
-                "ELEMENT_SORT_FIELD" => $arParams["ELEMENT_SORT_FIELD"],
-                "ELEMENT_SORT_ORDER" => $arParams["ELEMENT_SORT_ORDER"],
+                "ELEMENT_SORT_FIELD" => $sortField,
+                "ELEMENT_SORT_ORDER" => $sortOrder,
                 "ELEMENT_SORT_FIELD2" => $arParams["ELEMENT_SORT_FIELD2"],
                 "ELEMENT_SORT_ORDER2" => $arParams["ELEMENT_SORT_ORDER2"],
                 "PROPERTY_CODE" => $arParams["LIST_PROPERTY_CODE"],

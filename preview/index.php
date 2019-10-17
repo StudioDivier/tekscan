@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости");
-?><?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("Анонсы");
+?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"",
 	Array(
@@ -78,4 +79,5 @@ $APPLICATION->SetTitle("Новости");
 		"USE_SHARE" => "N",
 		"YANDEX" => "N"
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

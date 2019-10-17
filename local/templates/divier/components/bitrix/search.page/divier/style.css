@@ -11,7 +11,7 @@
 	color: #797e81;
 	font-size: 14px;
 	font-weight: 300;
-	margin-bottom: 28px;
+	margin-bottom: 10px;
 }
 .news-search-item__name a{
 	font-size: 22px;
@@ -30,12 +30,17 @@
 .news-search-item__button a img{
 	margin-left: 13px;
 }
+
+.pagination-items {
+	margin: 30px 0;
+}
+
 @media(max-width: 1024px){
 	.news-search-item{
 		display: block;
 	}
 	.news-search-item__img{
-		margin-right: 0px;
+		margin-right: 0;
 		margin-bottom: 30px;
 	}
 }

@@ -28,7 +28,7 @@ if (isset($_POST["tile"])) {
         $class = "services-list-items-v2";
     }
 } else {
-    $class = "services-list-items-v1";
+    $class = "services-list-items-v2";
 }
 ?>
 
@@ -60,6 +60,11 @@ if (isset($_POST["tile"])) {
         </div>
     <? endforeach; ?>
 </div>
+<?=$arResult["NAV_STRING"]?>
+<?$APPLICATION->IncludeComponent("divier:about", "")?>
+    <div class="mb-110">
+        <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
+    </div>
 <div class="modal modal-services-feedback">
     <div class="bg-exit button-exit"></div>
     <div class="modal-content">
@@ -219,8 +224,4 @@ if (isset($_POST["tile"])) {
             </div>
         </div>
     </div>
-</div>
-<?$APPLICATION->IncludeComponent("divier:about", "")?>
-<div class="mb-110">
-    <?$APPLICATION->IncludeComponent("divier:subscribe", "")?>
 </div>

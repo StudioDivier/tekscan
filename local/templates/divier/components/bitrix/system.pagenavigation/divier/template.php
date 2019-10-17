@@ -1,10 +1,10 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
-<div class="pagination-items mb-63">
-    <?
-    if (!$arResult["NavShowAlways"]) {
-        if ($arResult["NavRecordCount"] == 0 || ($arResult["NavPageCount"] == 1 && $arResult["NavShowAll"] == false))
-            return;
-    }
+<?
+if (!$arResult["NavShowAlways"]) {
+    if ($arResult["NavRecordCount"] == 0 || ($arResult["NavPageCount"] == 1 && $arResult["NavShowAll"] == false))
+        return;
+} ?>
+<div class="pagination-items mb-63"><?
     // to show always first and last pages
     $arResult["nStartPage"] = 1;
     $arResult["nEndPage"] = $arResult["NavPageCount"];
@@ -71,13 +71,11 @@
     } while ($arResult["nStartPage"] <= $arResult["nEndPage"]); ?>
     <? if ($arResult["NavPageNomer"] == $arResult["nEndPage"]): ?>
         <span class="pagination-item pagination-item-image">
-                <img src="<?= $templateFolder ?>/images/pagin-arrow-right_disabled.png" alt="Вперед">
-            </span>
+             <img src="<?= $templateFolder ?>/images/pagin-arrow-right_disabled.png" alt="Вперед">
+        </span>
     <? else: ?>
         <a href="<?= $sNextHref ?>" class="pagination-item pagination-item-image">
             <img src="<?= $templateFolder ?>/images/pagin-arrow-right.png" alt="Вперед">
         </a>
     <? endif; ?>
 </div>
-
-
