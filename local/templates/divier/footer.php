@@ -1,88 +1,28 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-				<div id="sidebar">
-					<div id="sidebar-inner">
-					
-						<div id="telephone"><nobr><?$APPLICATION->IncludeFile(
-									SITE_DIR."include/phone.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?></nobr></div>
-						
-						<div id="schedule"><div class="schedule">
-						<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/shedule.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?>
-						</div></div>
-						
-						<div id="support">
-							<div id="support-question"></div>
-							<b class="r0"></b>
-							<div id="support-text"><a href="<?=SITE_DIR?>contacts/feedback.php"><?=GetMessage("HDR_ASK")?></a></div>	
-							<b class="r0"></b>
-						</div>
+<section class="footer">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="footer-logo">
+                <a href="<?= SITE_DIR ?>">
+                    <img src="<?= SITE_TEMPLATE_PATH ?>/images/svg/logo2.svg" alt="">
+                </a>
+            </div>
+            <div class="footer-address">
+                <img class="address" src="<?= SITE_TEMPLATE_PATH ?>/images/svg/address2.svg">
+                <p>105064, г. Москва, ул. Земляной Вал, 9, этаж 4, офис 4065</p>
+            </div>
+            <div class="footer-dev-info">
+                <p>Общество с ограниченной ответственностью «Техскан-Сервис»,</p>
+                <p>ИНН: 7724406801 / 770901001, БИК: 044525700, Кор/счет:  30101810200000000700</p>
+                <p class="dev"><a href="https://www.divier.ru/">Создание сайта </a> ДиВиЕР</p>
+            </div>
 
-					<?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						Array(
-							"AREA_FILE_SHOW" => "page", 
-							"AREA_FILE_SUFFIX" => "inc", 
-							"AREA_FILE_RECURSIVE" => "N", 
-							"EDIT_MODE" => "html", 
-							"EDIT_TEMPLATE" => "page_inc.php" 
-							)
-					);?><?$APPLICATION->IncludeComponent(
-						"bitrix:main.include",
-						".default",
-						Array(
-							"AREA_FILE_SHOW" => "sect", 
-							"AREA_FILE_SUFFIX" => "inc", 
-							"AREA_FILE_RECURSIVE" => "Y", 
-							"EDIT_MODE" => "html", 
-							"EDIT_TEMPLATE" => "sect_inc.php" 
-						)
-					);?>
-					</div>
-				</div>
-			</div>
-	
-			<div id="space-for-footer"></div>
-			
-		</div>
-		
-		<div id="footer">
-		
-			<div id="copyright">
-			<?$APPLICATION->IncludeFile(
-									SITE_DIR."include/copyright.php",
-									Array(),
-									Array("MODE"=>"html")
-								);?>
-			</div>
-			<div id="bottom-menu">			
-			<?$APPLICATION->IncludeComponent("bitrix:menu", "bottom", array(
-				"ROOT_MENU_TYPE" => "bottom",
-				"MENU_CACHE_TYPE" => "Y",
-				"MENU_CACHE_TIME" => "36000000",
-				"MENU_CACHE_USE_GROUPS" => "Y",
-				"MENU_CACHE_GET_VARS" => array(
-				),
-				"MAX_LEVEL" => "1",
-				"CHILD_MENU_TYPE" => "bottom",
-				"USE_EXT" => "N",
-				"ALLOW_MULTI_SELECT" => "N"
-				),
-				false
-			);?>
-			</div>
-		</div>	
+        </div>
+    </div>
+</section>
+<?
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.4.1.min.js");
+?>
 </body>
 </html>

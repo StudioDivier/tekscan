@@ -1,0 +1,83 @@
+.FAQ-items{
+    margin-bottom: 54px;
+}
+.FAQ-item{
+    margin-bottom: 20px;
+}
+.FAQ-item-title{
+    width: 100%;
+    height: 53px;
+    display: flex;
+    cursor: pointer;
+    font-weight: 300;
+    padding-left: 24px;
+    align-items: center;
+    background-color: #f6f6f6;
+}
+.FAQ-item-title:before{
+    content: '+';
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    margin-right: 13px;
+}
+.FAQ-item.active .FAQ-item-title:before{
+    content: '-';
+}
+.FAQ-item-toggle-block{
+    margin-top: 57px;
+    margin-bottom: 57px;
+}
+.FAQ-item-toggle-block p {
+    margin-bottom: 40px;
+}
+.FAQ-item-toggle-block p:last-child {
+    margin-bottom: 60px;
+}
+.FAQ-tb-select{
+    display: flex;
+    margin-bottom: 57px;
+}
+.FAQ-tb-select-item{
+    width: 477px;
+    flex-shrink: 0;
+    text-align: center;
+    margin-right: 118px;
+}
+
+.FAQ-tb-select-item .select-item {
+    border: 3px solid #f7f7f7;
+    padding: 47px 0;
+}
+.FAQ-tb-select-item:last-child{
+    margin-right: 0;
+}
+.FAQ-tb-select-item p{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 39px;
+}
+.FAQ-tb-link a{
+    color: #0f4e84;
+    font-size: 15px;
+}
+
+@media(max-width: 1199px){
+    .FAQ-tb-select-item{
+        max-width: 377px;
+    }
+}
+@media(max-width: 1024px){
+    .FAQ-tb-select{
+        display: block;
+    }
+    .FAQ-tb-select-item{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 767px){
+    .FAQ-tb-select-item{
+        width: 100%;
+        max-width: 100%;
+    }
+}

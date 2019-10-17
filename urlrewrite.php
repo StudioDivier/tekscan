@@ -8,6 +8,30 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/mobileapp/jn.php',
     'SORT' => 100,
   ),
+  12 => 
+  array (
+    'CONDITION' => '#^/services/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/services/index.php',
+    'SORT' => 100,
+  ),
+  9 => 
+  array (
+    'CONDITION' => '#^/catalog/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/catalog/index.php',
+    'SORT' => 100,
+  ),
+  5 => 
+  array (
+    'CONDITION' => '#^/stati/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/stati/index.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/rest/#',
@@ -16,7 +40,7 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  2 => 
+  11 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',

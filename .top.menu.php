@@ -2,24 +2,24 @@
 $aMenuLinks = Array(
     Array(
         "О компании",
-        "#",
+        "/about/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Новости",
-        "#",
+        "/news/",
         Array(),
         Array(
             "CHILDREN" => Array(
                 Array(
                     "NAME" => "Новости",
-                    "LINK" => "#"
+                    "LINK" => "/news/"
                 ),
                 Array(
                     "NAME" => "Статьи",
-                    "LINK" => "#"
+                    "LINK" => "/stati/"
                 )
             )
         ),
@@ -27,35 +27,35 @@ $aMenuLinks = Array(
     ),
     Array(
         "Услуги",
-        "#",
+        "/services/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Анонсы",
-        "#",
+        "/preview/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Каталог продукции",
-        "#",
+        "/catalog/",
         Array(),
         Array(
             "CHILDREN" => Array(
                 Array(
                     "NAME" => "Системы измерения удельного давления",
-                    "LINK" => "#"
+                    "LINK" => "/catalog/sistemy-izmereniya-udelnogo-davleniya/"
                 ),
                 Array(
                     "NAME" => "Системы измерения силы",
-                    "LINK" => "#"
+                    "LINK" => "/catalog/sistemy-izmereniya-sily/"
                 ),
                 Array(
                     "NAME" => "Встраиваемые датчики распределения давления и силы",
-                    "LINK" => "#"
+                    "LINK" => "/catalog/vstraivaemye-datchiki-raspredeleniya-davleniya-i-sily/"
                 )
             )
         ),
@@ -63,14 +63,14 @@ $aMenuLinks = Array(
     ),
     Array(
         "FAQ",
-        "#",
+        "/faq/",
         Array(),
         Array(),
         ""
     ),
     Array(
         "Контакты",
-        "#",
+        "/contacts/",
         Array(),
         Array(),
         ""
